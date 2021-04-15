@@ -1,0 +1,584 @@
+/*Import*/
+@import 'vars';
+@import 'mixins';
+@import 'fonts';
+
+/*Main Styles*/
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1;
+    overflow-x: hidden;
+    font-family: sans-serif;
+    color: $dark-grey;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+a, button {
+    cursor: pointer;
+}
+
+button {
+    border: none;
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1150px;
+    margin: auto;
+    padding: 0px 20px;
+}
+
+/*Header*/
+.header {
+    min-height: 935px;
+    background: $blue no-repeat center center / cover;
+
+    &-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 40px 0px 33px;
+        border-bottom: 1px solid $white-opacity;
+
+        &__logo {
+            width: 168px;
+        }
+    
+        &__image {
+            max-width: 100%;
+            height: auto;
+        }
+    
+        &__nav {
+            display: flex;
+            align-items: center;
+        }
+    
+        &__nav-wrapp {
+            display: flex;
+        }
+    
+        &__nav-item {
+            margin-right: 30px;
+        }
+    
+        &__nav-link {
+            @include raleway-600;
+            font-size: 17px;
+            color: $white;
+            text-transform: uppercase;
+        }
+    }
+
+    &-content {
+        padding: 250px 0px 217px;
+
+        &__main {
+            max-width: 510px;
+
+            &-btns-google {
+                margin-right: 22px;
+            }
+    
+            &-title {
+                @include museo-slab;
+                font-size: 40px;
+                text-transform: uppercase;
+                color: $white;
+                margin-bottom: 40px;
+            }
+        
+            &-text {
+                @include raleway-400;
+                font-size: 26px;
+                line-height: 1.54;
+                color: $white-milk;
+                margin-bottom: 65px;
+            }
+        }
+    }
+
+    &-btn {
+        @include raleway-600;
+        font-size: 17px;
+        color: $white;
+        background: $blue-grey;
+        border-radius: 10px;
+        padding: 14px 20px;
+    
+        &_big {
+            font-size: 20px;
+            padding: 30px 67px;
+        }
+    
+        &_google {
+            background: url('/images/header/google-play.png')no-repeat 30px;
+            font-size: 20px;
+            background-color: $white;
+            padding: 30px 35px 30px 81px;
+            color: $black;
+        }
+    }
+}
+
+.burger {
+    cursor: pointer;
+    display: none;
+
+    &__item {
+        background: $white;
+        width: 35px;
+        height: 2px;
+    }
+
+    &__item:not(:last-child) {
+        margin-bottom: 10px;
+    }
+}
+
+/*Our Sevices*/
+.our-services {
+    background: $white;
+
+    &__container {
+        padding: 97px 20px 169px;
+    }
+}
+
+.container__top {
+    margin-bottom: 96px;
+}
+
+.services-top {
+    text-align: center;
+
+    &__content {
+        @include roboto-slab400;
+        font-size: 18px;
+        color: $dark-grey;
+        margin-bottom: 10px;
+    }
+
+    &__title {
+        @include roboto-slab600;
+        font-size: 24px;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: $black-grey;
+        padding-bottom: 22px;
+    }
+
+    &__line {
+        height: 2px;
+        width: 30px;
+        background: $blue;
+        margin: auto;
+    }
+}
+
+.services {
+    &-content {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        &_text_center {
+            text-align: center;
+        }
+    
+        &__card-logo {
+            margin-bottom: 30px;
+        }
+    
+        &__card-images {
+            max-width: 100%;
+            height: auto;
+        }
+    
+        &__card-title {
+            @include raleway-700;
+            font-size: 18px;
+            color: $black-grey;
+            margin-bottom: 28px;
+        }
+    
+        &__card-text {
+            @include raleway-500;
+            line-height: 26px;
+            color: $dark-grey;
+        }
+    }
+}
+
+/*Features*/
+.features {
+    padding: 115px 0px 111px;
+    display: flex;
+    background: $white no-repeat center center / cover;
+
+    &__logo {
+        margin-right: 150px;
+    }
+
+    &-logo {
+        max-width: 664px;
+
+        &__images {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+}
+
+.main-content {
+    max-width: 515px;
+    padding-top: 20px;
+
+    &__title {
+        opacity: 0.4;
+        @include raleway-600;
+        font-size: 22px;
+        color: $black-grey;
+        margin-bottom: 20px;
+    }
+
+    &__text {
+        @include raleway-600;
+        font-size: 32px;
+        color: $black-grey;
+        margin-bottom: 25px;
+    }
+
+    &__description {
+        @include raleway-500;
+        font-size: 20px;
+        line-height: 32px;
+        color: $dark-grey;
+        margin-bottom: 45px;
+    }
+}
+
+.main-wrapp {
+
+    &__text {
+        @include raleway-500;
+        font-size: 14px;
+        color: $dark-grey;
+        margin-bottom: 20px;
+
+        &:last-child {
+            margin-bottom: 0px;
+        }
+
+        &_bg {
+            background: url('/images/features/bullet-point.png') no-repeat 0;
+            padding-left: 40px;
+            line-height: 1.5;
+        }
+    }
+
+    &_padding_bottom {
+        padding-bottom: 50px;
+    }
+}
+
+.main-btn {
+    background: $blue-light;
+    box-shadow: 0px 10px 16px 0px rgba(102,212,244,0.3);
+    border-radius: 25px;
+    @include raleway-700;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 19px 29px;
+    letter-spacing: 0.1em;
+    color: $white;
+}
+
+/*Other Services*/
+.other-services {
+    background: $white;
+
+    &__conteiner {
+        padding: 54px 20px 119px;
+    }
+}
+
+.services-content {
+    &__card {
+        max-width: 350px;
+
+        &-ava {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        &_box {
+            padding-left: 55px;
+            position: relative;
+            margin-bottom: 30px;
+        }
+    }
+}
+
+/*Say*/
+.say {
+    background: $white no-repeat center center / cover;
+
+    &__container {
+        padding: 50px 20px 109px;
+    }
+}
+.slider {
+    width: 845px;
+    margin: auto;
+    background: no-repeat center center / cover;
+
+    &__wrapp {
+        max-width: 570px;
+        padding: 85px 0px;
+        text-align: center;
+        margin: auto;
+    }
+
+    &__wrapp-images {
+        margin: auto;
+        width: 111px;
+        height: 112px;
+    }
+
+    &__wrapp-title {
+        @include raleway-700;
+        font-size: 20px;
+        color: $black-grey;
+        margin-bottom: 10px;
+    }
+
+    &__wrapp-text {
+        @include raleway-500;
+        font-size: 15px;
+        color: $dark-grey;
+        margin-bottom: 40px;
+    }
+
+    &__wrapp-description {
+        @include raleway-500;
+        font-size: 18px;
+        line-height: 30px;
+        color: $dark-grey;
+        padding-bottom: 10px;
+    }
+}
+
+/*Resourse*/
+.resource {
+    background: $white;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        padding: 130px 20px;
+    }
+}
+
+.main-wrapp__text_line-height {
+    line-height: 26px;
+}
+
+.resource-logo {
+    max-width: 532px;
+
+    &__images {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/*Plans*/
+.plans {
+    background: $blue-blur no-repeat center center / cover;
+    min-height: 1000px;
+
+    &__container {
+        padding: 68px 20px 121px;
+    }
+}
+
+.plans-cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__item {
+        background: $white no-repeat 23px 0px;
+        max-width: 320px;
+        width: 100%;
+        border-radius: 20px;
+        text-align: center;
+        padding: 46px 10px;
+
+        &_big {
+            max-width: 350px;
+            padding: 80px 10px 70px;
+        }
+    }
+
+    &__item-images {
+        margin-bottom: 58px;
+    }
+
+    &__item-title {
+        @include raleway-700;
+        color: $black-grey;
+        margin-bottom: 20px;
+    }
+
+    &__item-text {
+        color: $blue-magic;
+        @include roboto-slab600;
+        font-size: 72px;
+        letter-spacing: -3px;
+        margin-bottom: 40px;
+
+        &-sub_vertical-align {
+            vertical-align: bottom;
+            margin-right: -12px;
+        }
+
+        &-sup_vertical-align {
+            vertical-align: top;
+        }
+    }
+
+    &__item-text-sup, &__item-text-sub {
+        @include raleway-500;
+        font-size: 20px;
+    }
+
+    &__item-block {
+        @include raleway-500;
+        font-size: 14px;
+        line-height: 32px;
+        color: $dark-grey;
+        margin-bottom: 50px;
+    }
+}
+
+/*Subscribe*/
+.subscribe {
+    background: $white;
+
+    &__container {
+        padding: 69px 20px 110px;
+    }
+
+    .form {
+        max-width: 370px;
+        margin: auto;
+    
+        &__input {
+            @include museo-slab;
+            display: block;
+            margin: 0px auto 26px; 
+            text-align: center;
+            outline: none;
+            padding: 17px 20px;
+            border-radius: 37.5px;
+            border: 1px solid rgba(255, 255, 255, 0.212);
+            box-shadow: 0px 8px 16px 0px rgba(2, 2, 2, 0.07);
+
+            &::placeholder {
+                @include museo-slab;
+            }
+
+            &_bg {
+                background: $milk;
+            }
+        }
+
+        &__input, .main-btn {
+            width: 100%;
+        }
+    }
+}
+
+/*Footer*/
+.footer {
+    background: $white;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid $milk-grey;
+    border-top: 1px solid $milk-grey;
+    padding: 50px 0px 76px;
+
+    &__card {
+        width: 109px;
+
+        &_big {
+            width: 210px;
+        }
+    }
+
+    &__card-logo-link {
+        display: inline-block;
+        margin-bottom: 20px;
+    }
+
+    &__card-description {
+        @include raleway-500;
+        font-size: 14px;
+        line-height: 28px;
+        color: $dark-grey;
+
+        &_margin_bottom {
+            margin-bottom: 22px;
+        }
+
+        &_decor::after {
+            content: "|";
+            margin: 0px 20px;
+        }
+    }
+
+    &__card-social-link {
+        margin-right: 10px;
+
+        &:last-child {
+            margin-right: 0px;
+        }
+    }
+
+    &__card-title {
+        @include raleway-700;
+        font-size: 20px;
+        color: $black-grey;
+        margin-bottom: 40px;
+    }
+
+    &__card-link {
+        color: $dark-grey;
+    }
+}
+
+.footer-content {
+    display: flex;
+    padding: 40px 0px;
+}
+
+/*Responsive*/
+@import 'responsive';

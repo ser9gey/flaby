@@ -1,0 +1,117 @@
+/*Responsive*/
+/*Header*/
+@media screen and(max-width: 965px) {
+    .header-top__nav {
+        display: none;
+    }
+    .burger {
+        display: block;
+    }
+    .header-content__main {
+        max-width: 100%;
+        text-align: center;
+    }
+    .header {
+        background-position: left center;
+    }
+    .header-btn_google {
+        display: block;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+}
+
+/*Our Sevices*/
+@media screen and(max-width: 1160px) {
+    .services-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .services-content__card:not(:last-child) {
+        margin-bottom: 70px;
+    }
+}
+
+/*Features*/
+@media screen and(max-width: 1375px) {
+    .features {
+        padding: 115px 20px 111px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .features__logo {
+        margin: 0px 0px 30px;
+    }
+    .main-content {
+        text-align: center;
+    }
+    .main-wrapp__text_bg {
+        background: none;
+        padding: 0px;
+        line-height: 1;
+    }
+}
+
+/*Other Services*/
+@media screen and(max-width: 1160px) {
+    .services-content__card_box {
+        padding-left: 0px;
+        text-align: center;
+    }
+    .services-content__card-ava {
+        position: static;
+        margin-bottom: 20px;
+    }
+}
+
+/*Resource*/
+@media screen and(max-width: 1180px) {
+    .resource__container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .main-content {
+        margin-bottom: 40px;
+    }
+}
+
+/*Plans*/
+@media screen and(max-width: 1150px) {
+    .plans-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    .plans-cards__item:not(:last-child) {
+        margin-bottom: 30px;
+    }
+    .plans-cards__item_big {
+        max-width: 320px;
+        padding: 46px 10px;
+    }
+}
+
+/*Footer*/
+@media screen and(max-width: 1000px) {
+    .footer-top {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-top__card:not(:last-child) {
+        margin-bottom: 40px;
+    }
+    .footer-content {
+        justify-content: center;
+    }
+}
+
+@media screen and(max-width: 650px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-top__card-description_decor::after {
+        content: none;
+    }
+}

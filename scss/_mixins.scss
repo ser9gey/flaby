@@ -1,0 +1,40 @@
+/*Mixins*/
+@mixin raleway-400 {
+    font-family: "Raleway";
+    font-weight: 400;
+}
+
+@mixin raleway-500 {
+    font-family: 'Raleway';
+    font-weight: 500;
+}
+
+@mixin raleway-600 {
+    font-family: 'Raleway';
+    font-weight: 600;
+}
+
+@mixin raleway-700 {
+    font-family: 'Raleway';
+    font-weight: 700;
+}
+
+@mixin raleway-800 {
+    font-family: 'Raleway';
+    font-weight: 800;
+}
+
+@mixin museo-slab {
+    font-family: 'Museo Slab';
+    font-weight: 500;
+}
+
+@mixin roboto-slab400 {
+    font-family: 'Roboto Slab';
+    font-weight: 400;
+}
+
+@mixin roboto-slab600 {
+    font-family: 'Roboto Slab';
+    font-weight: 600;
+}
